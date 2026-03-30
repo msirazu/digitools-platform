@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "name": "AI Resume Builder",
+    "description": "Create professional resumes with AI assistance.",
+    "price": 19,
+    "period": "one-time",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["100+ templates", "ATS optimization", "Export to PDF"],
+    "icon": "📄"
+  },
+  {
+    "id": 2,
+    "name": "SEO Analyzer Tool",
+    "description": "Analyze and improve your website SEO performance.",
+    "price": 9,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best",
+    "features": ["Keyword analysis", "Backlink checker", "Site audit"],
+    "icon": "🔍"
+  },
+  {
+    "id": 3,
+    "name": "AI Content Writer",
+    "description": "Generate high-quality blog and marketing content.",
+    "price": 15,
+    "period": "monthly",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["Blog generator", "Ad copy", "SEO optimized content"],
+    "icon": "✍️"
+  },
+  {
+    "id": 4,
+    "name": "Social Media Scheduler",
+    "description": "Schedule and manage all your social posts.",
+    "price": 12,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["Auto scheduling", "Multi-platform", "Analytics"],
+    "icon": "📅"
+  },
+  {
+    "id": 5,
+    "name": "Website Builder Pro",
+    "description": "Build websites without coding.",
+    "price": 49,
+    "period": "yearly",
+    "tag": "best seller",
+    "tagType": "best",
+    "features": ["Drag & drop", "Templates", "Hosting included"],
+    "icon": "🌐"
+  },
+  {
+    "id": 6,
+    "name": "Graphic Design Toolkit",
+    "description": "Create stunning designs easily.",
+    "price": 25,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["Icons library", "Templates", "Export HD"],
+    "icon": "🎨"
+  },
+  {
+    "id": 7,
+    "name": "Email Marketing Tool",
+    "description": "Send bulk emails and automate campaigns.",
+    "price": 18,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["Email templates", "Automation", "Analytics"],
+    "icon": "📧"
+  },
+  {
+    "id": 8,
+    "name": "Password Manager",
+    "description": "Securely store and manage your passwords.",
+    "price": 5,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best",
+    "features": ["Auto-fill", "Encryption", "Multi-device sync"],
+    "icon": "🔐"
+  },
+  {
+    "id": 9,
+    "name": "Video Editing Tool",
+    "description": "Edit videos with professional features.",
+    "price": 30,
+    "period": "yearly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["Transitions", "Effects", "Export 4K"],
+    "icon": "🎬"
+  },
+  {
+    "id": 10,
+    "name": "Online Course Builder",
+    "description": "Create and sell online courses easily.",
+    "price": 60,
+    "period": "yearly",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["Course templates", "Payment integration", "Student dashboard"],
+    "icon": "🎓"
+  }
+]

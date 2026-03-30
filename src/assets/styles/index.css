@@ -13,7 +13,13 @@
     .btn-one {
        @apply bg-linear-to-r from-one to-two text-white px-5 py-2 rounded-full;
     }
+    .btn-two {
+       @apply bg-[#E1E7FF] px-5 py-2 rounded-full;
+    }
     .text-gradient-one {
         @apply bg-linear-to-r from-one to-two bg-clip-text text-transparent;
+    }
+    .gradient-one {
+        @apply bg-linear-to-r from-one to-two;
     }
 }

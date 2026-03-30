@@ -29,13 +29,13 @@ const Navbar = () => {
       <li><a>FAQ</a></li>
     </ul>
   </div>
-  <div className="navbar-end gap-3">
+  <div className="navbar-end gap-3 flex-wrap justify-center md:justify-end">
     <ShoppingCart className='text-[5px]'/>
     <a>Login</a>
     <button className="btn-one">Get Started</button>
   </div>
 </nav>
-    ); 
+    );
 };
 
 export default Navbar;
