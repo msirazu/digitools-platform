@@ -1,6 +1,6 @@
-const ToolCard = ({ data, handleCart, cart, setCart }) => {
+const ToolCard = ({ data, handleCart}) => {
 
-    const {name, description, price, period, tag, tagType, features, icon} = data;
+    const {name, description, price, period, tag, features, icon} = data;
 
     return (
         <div className="border p-5 rounded-xl border-gray-200 space-y-3 hover:shadow-md hover:border-gray-300 hover:cursor-pointer">

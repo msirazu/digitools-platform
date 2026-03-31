@@ -12,7 +12,7 @@
 
 @layer components {
     .btn-one {
-       @apply bg-linear-to-r from-one to-two text-white px-5 py-2 rounded-full;
+       @apply bg-linear-to-r from-one to-two text-white px-5 py-2 rounded-full text-[12px] hover:cursor-pointer
     }
     .btn-two {
        @apply bg-[#E1E7FF] px-5 py-2 rounded-full;
