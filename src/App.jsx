@@ -1,8 +1,18 @@
+import { Suspense, useState } from "react";
+import ToolsCard from "./components/common/ToolsCard";
 import Navbar from "./components/layout/header/Navbar";
 import HeroBanner from "./components/ui/HeroBanner";
 import UserStats from "./components/ui/UserStats";
+import Cart from "./components/common/Cart";
+
+const dataFetch = async () => {
+  const res = await fetch('/data/toolsData.json');
+  return res.json();
+}
 
 const App = () => {
+  const dataPromise = dataFetch();
+  const [activeTab, setActiveTab] = useState('product');
   return (
     <div className="font-manrope">
       <header id="header-section" className="w-11/12 lg:w-10/12 mx-auto">
@@ -20,16 +30,23 @@ const App = () => {
           <p className="text-[12px]">Choose from our curated collection of premium digital products designed<br/>to boost your productivity and creativity.</p>
         </section>
 
-        <section id="tab-section" className="mt-10 flex justify-center">
+        <section id="tab-section" className="my-10 flex justify-center">
           <div className="tabs tabs-box">
-  <input type="radio" name="my_tabs_1" className="tab" aria-label="Products" defaultChecked />
-  <input type="radio" name="my_tabs_1" className="tab" aria-label="Cart"/>
+  <input type="radio" name="my_tabs_1" className="tab" aria-label="Products" defaultChecked onClick={()=> setActiveTab('product')}/>
+  <input type="radio" name="my_tabs_1" className="tab" aria-label="Cart" onClick={()=> setActiveTab('cart')}/>
 </div>
         </section>
 
         <section id="card-section">
-
+          {activeTab === 'product' ? <div>
+          <Suspense fallback={<p>loading.....</p>}>
+          <ToolsCard dataPromise={dataPromise}/>
+          </Suspense>
+          </div> : <div>
+            <Cart/>
+          </div>}
         </section>
+
       </main>
 
       <section id="workflow-section">
