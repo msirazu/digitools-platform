@@ -21,8 +21,13 @@ const App = () => {
   const [cart, setCart] = useState([]);
 
   const handleCart = (data) => {
-      setCart([...cart, data]);
-      toast.success('added successfully');
+      const isExists = cart.find(d => d.id === data.id)
+      if (isExists) {
+        toast.error('already exists');
+      } else {
+        setCart([...cart, data]);
+        toast.success('added successfully');
+      }
   }
 
   return (

@@ -5,7 +5,7 @@ const HeroBanner = () => {
         <>
             <section className="flex flex-col md:flex-row py-10 gap-5 items-center justify-center">
                 <div className='flex-1 space-y-5'>
-                    <div className='btn-two text-xsmall flex items-center gap-2 w-[60%] md:w-[50%] lg:w-[30%]'><span><FaCircle className='text-one'/></span> New: AI-Powered Tools Available</div>
+                    <div className='btn-two text-xsmall items-center gap-2 inline-flex'><span><FaCircle className='text-one'/></span> New: AI-Powered Tools Available</div>
                     <h2 className='font-bold text-5xl'>Supercharge Your Digital Workflow</h2>
                     <p className='text-sm'>Access premium AI tools, design assets, templates, and productivity software—all in one place. Start creating faster today. Explore Products</p>
                     <div className='flex gap-5'>
