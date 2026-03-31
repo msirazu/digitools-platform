@@ -8,6 +8,7 @@
     --color-one: #4F39F6;
     --color-two: #9514FA;
     --color-three: #101727;
+    --color-four: #F9FAFC;
 }
 
 @layer components {
@@ -15,7 +16,10 @@
        @apply bg-linear-to-r from-one to-two text-white px-5 py-2 rounded-full text-[12px] hover:cursor-pointer
     }
     .btn-two {
-       @apply bg-[#E1E7FF] px-5 py-2 rounded-full;
+       @apply bg-[#E1E7FF] px-5 py-2 rounded-full text-[12px];
+    }
+    .btn-three {
+       @apply bg-[#E1E7FF] px-5 py-2 rounded-full text-black hover:bg-gray-200 hover:cursor-pointer text-[12px];
     }
     .text-gradient-one {
         @apply bg-linear-to-r from-one to-two bg-clip-text text-transparent;
@@ -25,5 +29,8 @@
     }
     .text-small{
         @apply text-[12px];
+    }
+    .text-xsmall{
+        @apply text-[10px];
     }
 }
