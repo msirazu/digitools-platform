@@ -1,4 +1,4 @@
-const ToolCard = ({ data }) => {
+const ToolCard = ({ data, handleCart, cart, setCart }) => {
 
     const {name, description, price, period, tag, tagType, features, icon} = data;
 
@@ -14,7 +14,7 @@ const ToolCard = ({ data }) => {
             <div>
             {features.map((feature, index) => <p className="text-[12px]" key={index}>{feature}</p>)}
             </div>
-            <button className="btn-one w-full">Buy Now</button>
+            <button onClick={() => handleCart(data)} className="btn-one w-full">Buy Now</button>
         </div>
     );
 };

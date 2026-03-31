@@ -7,6 +7,7 @@
     --font-manrope: "Manrope", sans-serif;
     --color-one: #4F39F6;
     --color-two: #9514FA;
+    --color-three: #101727;
 }
 
 @layer components {
@@ -21,5 +22,8 @@
     }
     .gradient-one {
         @apply bg-linear-to-r from-one to-two;
+    }
+    .text-small{
+        @apply text-[12px];
     }
 }

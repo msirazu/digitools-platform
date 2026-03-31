@@ -4,6 +4,11 @@ import Navbar from "./components/layout/header/Navbar";
 import HeroBanner from "./components/ui/HeroBanner";
 import UserStats from "./components/ui/UserStats";
 import Cart from "./components/common/Cart";
+import Footer from "./components/layout/footer/Footer";
+import WorkFlow from "./components/layout/other/WorkFlow";
+import TransparentPricing from "./components/layout/other/TransparentPricing";
+import ThreeSteps from "./components/layout/other/ThreeSteps";
+import Loading from "./components/common/Loading";
 
 const dataFetch = async () => {
   const res = await fetch('/data/toolsData.json');
@@ -13,8 +18,14 @@ const dataFetch = async () => {
 const App = () => {
   const dataPromise = dataFetch();
   const [activeTab, setActiveTab] = useState('product');
+  const [cart, setCart] = useState([]);
+
+  const handleCart = (data) => {
+      setCart([...cart, data]);
+  }
+
   return (
-    <div className="font-manrope">
+    <div className="font-manrope space-y-5">
       <header id="header-section" className="w-11/12 lg:w-10/12 mx-auto">
         <Navbar/>
         <HeroBanner/>
@@ -33,14 +44,14 @@ const App = () => {
         <section id="tab-section" className="my-10 flex justify-center">
           <div className="tabs tabs-box">
   <input type="radio" name="my_tabs_1" className="tab" aria-label="Products" defaultChecked onClick={()=> setActiveTab('product')}/>
-  <input type="radio" name="my_tabs_1" className="tab" aria-label="Cart" onClick={()=> setActiveTab('cart')}/>
+  <input type="radio" name="my_tabs_1" className="tab" aria-label={`Cart: (${cart.length})`} onClick={()=> setActiveTab('cart')}/>
 </div>
         </section>
 
         <section id="card-section">
           {activeTab === 'product' ? <div>
-          <Suspense fallback={<p>loading.....</p>}>
-          <ToolsCard dataPromise={dataPromise}/>
+          <Suspense fallback={<Loading/>}>
+          <ToolsCard dataPromise={dataPromise} handleCart={handleCart} cart={cart} setCart={setCart}/>
           </Suspense>
           </div> : <div>
             <Cart/>
@@ -49,12 +60,14 @@ const App = () => {
 
       </main>
 
-      <section id="workflow-section">
-
+      <section id="other-section">
+        <ThreeSteps/>
+        <TransparentPricing/>
+        <WorkFlow/>
       </section>
 
-      <footer id="footer-section" className="w-11/12 lg:w-10/12 mx-auto">
-
+      <footer id="footer-section" className="bg-three pt-10 pb-5">
+        <Footer/>
       </footer>
     </div>
   );
