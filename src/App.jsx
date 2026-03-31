@@ -1,4 +1,4 @@
-import { Suspense, useState } from "react";
+import { useState } from "react";
 import ToolsCard from "./components/common/ToolsCard";
 import Navbar from "./components/layout/header/Navbar";
 import HeroBanner from "./components/ui/HeroBanner";
@@ -8,16 +8,15 @@ import Footer from "./components/layout/footer/Footer";
 import WorkFlow from "./components/layout/other/WorkFlow";
 import TransparentPricing from "./components/layout/other/TransparentPricing";
 import ThreeSteps from "./components/layout/other/ThreeSteps";
-import Loading from "./components/common/Loading";
 import { toast } from "react-toastify";
 
 const dataFetch = async () => {
   const res = await fetch('/data/toolsData.json');
   return res.json();
 }
+const dataPromise = dataFetch();
 
 const App = () => {
-  const dataPromise = dataFetch();
   const [activeTab, setActiveTab] = useState('product');
   const [cart, setCart] = useState([]);
 
@@ -52,9 +51,7 @@ const App = () => {
 
         <section id="card-section">
           {activeTab === 'product' ? <div>
-          <Suspense fallback={<Loading/>}>
           <ToolsCard dataPromise={dataPromise} handleCart={handleCart} cart={cart} setCart={setCart}/>
-          </Suspense>
           </div> : <div>
             <Carts cart={cart} setCart={setCart}/>
           </div>}
