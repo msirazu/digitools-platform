@@ -3,6 +3,8 @@ import Cart from "./Cart";
 
 const Carts = ({ cart, setCart }) => {
 
+  const total = cart.reduce((sum, item) => sum + item.price, 0);
+
     const handleCheckout = () => {
         setCart([]);
         toast.success('payment successful');
@@ -13,7 +15,6 @@ const Carts = ({ cart, setCart }) => {
         setCart(filteredData);
         toast.error('removed successfully');
     }
-
   return (
     <div className="border space-y-5 border-gray-200 p-5 rounded-xl">
       <section>
@@ -27,7 +28,7 @@ const Carts = ({ cart, setCart }) => {
           {cart.map(cartData => <Cart key={cartData.id} cartData={cartData} cart={cart} handleCartRemove={handleCartRemove}/>)}
           <div className="flex justify-between">
             <p>Total:</p>
-            <p>$ 70</p>
+            <p>$ {total}</p>
           </div>
           <button onClick={handleCheckout} className="btn-one">Proceed To Checkout</button>
         </div>}

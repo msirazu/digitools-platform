@@ -58,13 +58,13 @@ const App = () => {
         </section>
       </main>
 
-      <section id="other-section" className="mt-5 space-y-10">
+      {activeTab === 'product' && <section id="other-section" className="mt-5 space-y-10">
         <ThreeSteps/>
         <TransparentPricing/>
         <WorkFlow/>
-      </section>
+      </section>}
 
-      <footer id="footer-section" className="bg-three pt-10 pb-5">
+      <footer id="footer-section" className={`bg-three pt-10 pb-5 ${activeTab === 'product' ? 'mt-0' : 'mt-10'}`}>
         <Footer/>
       </footer>
     </div>
