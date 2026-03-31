@@ -9,6 +9,12 @@
     --color-two: #9514FA;
     --color-three: #101727;
     --color-four: #F9FAFC;
+    --color-five: #FAFAFA;
+    --color-tag-one: #DBFCE7;
+    --color-tag-two: #0A883E;
+    --color-tag-three: #E1E7FF;
+    --color-tag-four: #FEF3C6;
+    --color-tag-five: #BB4D00;
 }
 
 @layer components {

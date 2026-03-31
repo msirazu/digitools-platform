@@ -45,9 +45,9 @@ const Footer = () => {
               </div>
             </div>
             <hr className="border-dashed border-gray-500 mt-10 mb-3"/>
-            <div className="text-white flex flex-col md:flex-row justify-between gap-5">
+            <div className="text-five flex flex-col md:flex-row justify-between gap-5">
               <div className="flex justify-center">
-                <p className="text-[12px]">© 2026 DigiTools. All rights reserved.</p>
+                <p className="text-small">© 2026 DigiTools. All rights reserved.</p>
               </div>
               <div className="flex gap-5 text-small justify-center">
                 <p>Privacy Policy</p>

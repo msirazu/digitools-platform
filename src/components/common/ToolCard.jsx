@@ -6,7 +6,7 @@ const ToolCard = ({ data, handleCart}) => {
         <div className="border p-5 rounded-xl border-gray-200 space-y-3 hover:shadow-md hover:border-gray-300 hover:cursor-pointer">
             <div className="flex justify-between items-center">
                 {icon}
-                <p className="capitalize text-[12px]">{tag}</p>
+                <p className={`capitalize text-xsmall px-5 py-1 rounded-full ${tag == 'popular' && 'bg-tag-three text-one'} ${tag == 'new' && 'bg-tag-one text-tag-two'} ${tag == 'best seller' && 'bg-tag-four text-tag-five'}`}>{tag}</p>
             </div>
             <h2 className="font-bold text-xl">{name}</h2>
             <p className="text-sm">{description}</p>
