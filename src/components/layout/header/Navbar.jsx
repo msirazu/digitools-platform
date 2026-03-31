@@ -1,6 +1,6 @@
-import { ShoppingCart } from 'lucide-react';
+import { FaShoppingCart } from "react-icons/fa";
 
-const Navbar = () => {
+const Navbar = ({ cart }) => {
     return (
         <nav className="navbar bg-base-100 shadow-sm">
   <div className="navbar-start">
@@ -30,7 +30,8 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end gap-3 flex-wrap justify-center md:justify-end">
-    <ShoppingCart className='text-[5px]'/>
+    <span>{cart.length}</span>
+    <FaShoppingCart className="text-lg"/>
     <a>Login</a>
     <button className="btn-one">Get Started</button>
   </div>

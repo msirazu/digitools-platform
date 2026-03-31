@@ -33,7 +33,7 @@ const App = () => {
   return (
     <div className="font-manrope">
       <header id="header-section" className="w-11/12 lg:w-10/12 mx-auto">
-        <Navbar/>
+        <Navbar cart={cart}/>
         <HeroBanner/>
       </header>
 
