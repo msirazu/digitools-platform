@@ -1,4 +1,4 @@
-import { FaCircle } from 'react-icons/fa';
+import { FaCircle, FaPlay } from 'react-icons/fa';
 import heroImg from '../../assets/images/banner.png';
 const HeroBanner = () => {
     return (
@@ -10,7 +10,7 @@ const HeroBanner = () => {
                     <p className='text-sm'>Access premium AI tools, design assets, templates, and productivity software—all in one place. Start creating faster today. Explore Products</p>
                     <div className='flex gap-5'>
                         <button className='btn-one'>Explore Products</button>
-                        <button className='btn btn-outline rounded-full'>Watch Demo</button>
+                        <button className='btn btn-outline rounded-full'><FaPlay/>Watch Demo</button>
                     </div>
                 </div>
                 <div className='flex-1'>
